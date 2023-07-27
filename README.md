@@ -29,7 +29,6 @@ Firebase con los datos de los productos comprados.
 
 ![Carrito](https://i.ibb.co/34nQVxR/Screenshot-2.png "Carrito")
 
-![Checkout](https://i.ibb.co/DCKgK5N/Screenshot-4.png "Checkout")
 
 
 ### `npm install`
