@@ -23,7 +23,6 @@ Firebase con los datos de los productos comprados.
 
 ## Screenshots
 
-![Login](https://i.ibb.co/Z1N46xW/Screenshot-5.png "Login")
 
 ![Detalle Producto](https://i.ibb.co/P9Xcktv/Screenshot-3.png "Detalle")
 
