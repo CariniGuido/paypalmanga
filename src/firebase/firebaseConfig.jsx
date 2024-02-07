@@ -1,18 +1,20 @@
-// Import the functions you need from the SDKs you need
+// Importa las funciones que necesitas de los SDKs necesarios
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Configuración de tu aplicación Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyD3eRQi2TeKi5EBo6NDnbS4DiY7iniVXEE",
-  authDomain: "mangadiction-coderhouse.firebaseapp.com",
-  projectId: "mangadiction-coderhouse",
-  storageBucket: "mangadiction-coderhouse.appspot.com",
-  messagingSenderId: "448197660991",
-  appId: "1:448197660991:web:e9ede6ff4196500c69c38a"
+  apiKey: "AIzaSyAswJrDj39QMJK_B8ckv-0wfUS5AKdDeyU",
+  authDomain: "tiendascorco.firebaseapp.com",
+  projectId: "tiendascorco",
+  storageBucket: "tiendascorco.appspot.com",
+  messagingSenderId: "373539004864",
+  appId: "1:373539004864:web:23c78527aa34dfcc376825",
+  measurementId: "G-MFVHMQYEJH"
 };
-
-// Initialize Firebase
+// Inicializa Firebase y obtén la instancia de Firestore
 export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
- export const db = getFirestore(app);
+// Imprime la configuración de Firebase en la consola
+console.log('Configuración de Firebase:', JSON.stringify(firebaseConfig, null, 2));

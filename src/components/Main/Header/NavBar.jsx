@@ -24,13 +24,20 @@ const NavBar = () =>
       <Container fluid className={` d-flex justify-content-around ${styles.marginbrand} `} >
         <Link className='text-decoration-none text-white fs-6 d-flex flex-column align-items-center ' to="/" >
           <img className={styles.img} src={logo} alt="" /> 
-           Mangadiction 
+          <cite className="border-t-4 shadow" style={{ boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.4)' }}>
+    Moda Luna
+</cite>
+
+
+
+    
+
         </Link>
         <Nav className={`${styles.navLinks}`}>
           <Link to="/" className='nav-link'>Home</Link>
-          <Link to="categorias/Seinen" className='nav-link'>Seinen</Link>
-          <Link to="categorias/Spokon" className='nav-link'>Spokon</Link>
-          <Link to="categorias/Shounen" className='nav-link'>Shounen</Link>
+          <Link to="categorias/Remeras" className='nav-link'>Remeras</Link>
+          <Link to="categorias/Camperas&Buzos" className='nav-link'>Camperas & Buzos</Link>
+          <Link to="categorias/Pantalones" className='nav-link'>Pantalones</Link>
         </Nav>
           <CartWidget />
             <button className={`  btn btn-danger ${styles.logout}`} onClick={()=> signOut(auth)}>Log-Out</button>  
@@ -38,9 +45,9 @@ const NavBar = () =>
     </Navbar>
       <div className={`${styles.navbarSecondary} `}>
           <Link to="/" className='nav-link mx-2'>Home</Link>
-          <Link to="categorias/Seinen" className='nav-link mx-2'>Seinen</Link>
-          <Link to="categorias/Spokon" className='nav-link mx-2'>Spokon</Link>
-          <Link to="categorias/Shounen" className='nav-link mx-2'>Shounen</Link>
+          <Link to="categorias/Remeras" className='nav-link mx-2'>Remeras</Link>
+          <Link to="categorias/Camperas&Buzos" className='nav-link mx-2'>Camperas & Buzos</Link>
+          <Link to="categorias/Pantalones" className='nav-link mx-2'>Pantalones</Link>
       </div>
 
       </>

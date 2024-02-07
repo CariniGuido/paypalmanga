@@ -17,16 +17,29 @@ const useProducts = () => {
     const q = categoryId
       ? query(productosRef, where("categoria", "==", categoryId))
       : productosRef;
+
+      console.log('Query:', q.toString());  // Agrega este console.log
+
     //2- Consumir la referencia (asynch)
     getDocs(q)
       .then((resp) => {
-        const productos = resp.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setProductos(productos);
-      })
+        const productos = resp.docs.map((doc) => {
+          const data = doc.data();
+          // Imprime la estructura de cada documento en la consola
+          console.log(`Estructura del documento (${doc.id}):`, data);
 
+          // Retorna el objeto con los datos del documento
+          return {
+            id: doc.id,
+            ...data,
+          };
+        });
+        setProductos(productos);
+        // Agrega aquí cualquier lógica adicional después de obtener los datos
+      })
+      .catch((error) => {
+        console.error("Error al obtener datos:", error);
+      })
       .finally(() => {
         setLoading(false);
       });

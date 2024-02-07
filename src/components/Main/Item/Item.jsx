@@ -21,12 +21,12 @@ const Item = ({ producto }) => {
                 <Link className='btn btn-primary my-2' to={`/item/${producto.id}`}>Ver más</Link>  
 
                 {(() =>{
-                  if(producto.categoria === "Seinen"){
+                  if(producto.categoria === "Remeras"){
                     return(
                       <div className={`${styles.badge} badge bg-danger position-absolute`}>{producto.categoria}</div>
                     )
 
-                  } else if(producto.categoria === "Shounen"){
+                  } else if(producto.categoria === "Pantalones"){
                     return (
                     <div className={`${styles.badge} badge bg-primary position-absolute`}>{producto.categoria}</div>)
                   } else{
